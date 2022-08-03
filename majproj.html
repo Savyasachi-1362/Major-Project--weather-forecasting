@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="majproj.css">
+    <title>Document</title>
+</head>
+<body id="body1">
+    <div class="weatherpage" id="mainpage">
+    <div class="title"><h1>Weather App!</h1></div>
+    
+    <div class="header">
+    <div class="timecontainer">
+        <div class="datentime">
+            <div id="time">
+                <span id="AM-PM"></span>
+            </div>
+            <div id="date"> </div>
+            <div id="citydisplay">Hello!</div>
+            <div id="day0">
+                <div class="image"><img src="dots.png" class="imgClass" id="img0"></div>
+                <div class="conditions0">
+                    <div class="stat">
+                        <div class="parameter">Temperature(&#8451)</div>
+                        <p class="metric" id="t0">35</p>
+                    </div>
+                    <div class="stat">
+                        <div class="parameter" >Humidity(%)</div>
+                        <p class="metric" id="h0">35</p>
+                    </div>
+                    <div class="stat">
+                        <div class="parameter" >Rainfall(mm)</div>
+                        <p class="metric" id="r0">35</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="searchbar">
+        <div class="searchtitle">Enter the desired location:</div>
+        <div class="locsearch"><input type="text" name="location" id="locinput" placeholder="Enter the City Name"></div>
+       
+       <div class="button-container"> <button class="location-buttons" onclick="searchlocation()">Search for Location</button> <button class="location-buttons" onclick="thislocation()">Use Current Location</button> </div>
+    </div></div>
+    <div class="weather-container">
+        <div class="weathercard">
+            <p class="dayndate" id="day1">30 July,2022<br>Saturdy</p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+            <div class="conditions">
+                <div class="stat">
+                    <p class="parameter">MaxTemp(&#8451)</p>
+                    <p class="metric" id="max1">35</p>
+                        <p class="metric" id="changemax1">--%</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">MinTemp(&#8451)</p>
+                    <p class="metric" id="min1">25</p>
+                    <p class="metric" id="changemin1">--%</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">Humidity(%)</p>
+                    <p class="metric" id="h1">25</p>
+                    <p class="metric" id="changeh1">--%</p>
+                </div>
+                <div></div>
+                <div class="stat">
+                    <div class="parameter">Rainfall(mm)</div>
+                    <div class="metric" id="r1">25</div>
+                    <p class="metric" id="changer1">--%</p>
+                    </div>
+                    <div></div>
+                    <div class="stat">
+                        <p class="parameter">Wind(m/s)</p>
+                        <p class="metric" id="w1">25</p>
+                        <div class="metric" id="changew1">--%</div>
+                    </div>
+            </div>
+        </div>
+        <div class="weathercard">
+            <p class="dayndate" id="day2">30 July,2022<br>Saturdy</p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img2"></div>
+            <div class="conditions">
+                <div class="stat">
+                    <p class="parameter">MaxTemp(&#8451)</p>
+                    <p class="metric" id="max2">35</p>
+                        <p class="metric" id="changemax2">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">MinTemp(&#8451)</p>
+                    <p class="metric" id="min2">25</p>
+                    <p class="metric" id="changemin2">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">Humidity(%)</p>
+                    <p class="metric" id="h2">25</p>
+                    <p class="metric" id="changeh2">25</p>
+                </div>
+                <div></div>
+                <div class="stat">
+                    <p class="parameter">Rainfall(mm)</p>
+                    <p class="metric" id="r2">25</p>
+                    <p class="metric" id="changer2">25</p>
+                    </div>
+                    <div></div>
+                    <div class="stat">
+                        <p class="parameter">Wind(m/s)</p>
+                        <p class="metric" id="w2">25</p>
+                        <p class="metric" id="changew2">25</p>
+                    </div>
+            </div>
+        </div>
+        <div class="weathercard">
+            <p class="dayndate" id="day3">30 July,2022<br>Saturdy</p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img3"></div>
+            <div class="conditions">
+                <div class="stat">
+                    <p class="parameter">MaxTemp(&#8451)</p>
+                    <p class="metric" id="max3">35</p>
+                        <p class="metric" id="changemax3">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">MinTemp(&#8451)</p>
+                    <p class="metric" id="min3">25</p>
+                    <p class="metric" id="changemin3">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">Humidity(%)</p>
+                    <p class="metric" id="h3">25</p>
+                    <p class="metric" id="changeh3">25</p>
+                </div>
+                <div></div>
+                <div class="stat">
+                    <p class="parameter">Rainfall(mm)</p>
+                    <p class="metric" id="r3">25</p>
+                    <p class="metric" id="changer3">25</p>
+                    </div>
+                    <div></div>
+                    <div class="stat">
+                        <p class="parameter">Wind(m/s)</p>
+                        <p class="metric" id="w3">25</p>
+                        <p class="metric" id="changew3">25</p>
+                    </div>
+            </div>
+        </div>
+        <div class="weathercard">
+            <p class="dayndate" id="day4">30 July,2022<br>Saturdy</p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img4"></div>
+            <div class="conditions">
+                <div class="stat">
+                    <p class="parameter">MaxTemp(&#8451)</p>
+                    <p class="metric" id="max4">35</p>
+                        <p class="metric" id="changemax4">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">MinTemp(&#8451)</p>
+                    <p class="metric" id="min4">25</p>
+                    <p class="metric" id="changemin4">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">Humidity(%)</p>
+                    <p class="metric" id="h4">25</p>
+                    <p class="metric" id="changeh4">25</p>
+                </div>
+                <div></div>
+                <div class="stat">
+                    <p class="parameter">Rainfall(mm)</p>
+                    <p class="metric" id="r4">25</p>
+                    <p class="metric" id="changer4">25</p>
+                    </div>
+                    <div></div>
+                    <div class="stat">
+                        <p class="parameter">Wind(m/s)</p>
+                        <p class="metric" id="w4">25</p>
+                        <p class="metric" id="changew4">25</p>
+                    </div>
+            </div>
+        </div>
+        <div class="weathercard">
+            <p class="dayndate" id="day5">30 July,2022<br>Saturdy</p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img5"></div>
+            <div class="conditions">
+                <div class="stat">
+                    <p class="parameter">MaxTemp(&#8451)</p>
+                    <p class="metric" id="max5">35</p>
+                        <p class="metric" id="changemax5">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">MinTemp(&#8451)</p>
+                    <p class="metric" id="min5">25</p>
+                    <p class="metric" id="changemin5">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">Humidity(%)</p>
+                    <p class="metric" id="h5">25</p>
+                    <p class="metric" id="changeh5">25</p>
+                </div>
+                <div></div>
+                <div class="stat">
+                    <p class="parameter">Rainfall(mm)</p>
+                    <p class="metric" id="r5">25</p>
+                    <p class="metric" id="changer5">25</p>
+                    </div>
+                    <div></div>
+                    <div class="stat">
+                        <p class="parameter">Wind(m/s)</p>
+                        <p class="metric" id="w5">25</p>
+                        <p class="metric" id="changew5">25</p>
+                    </div>
+            </div>
+        </div>
+        <div class="weathercard ">
+            <p class="dayndate" id="day6">30 July,2022<br>Saturdy</p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img6"></div>
+            <div class="conditions">
+                <div class="stat">
+                    <p class="parameter">MaxTemp(&#8451)</p>
+                    <p class="metric" id="max6">35</p>
+                        <p class="metric" id="changemax6">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">MinTemp(&#8451)</p>
+                    <p class="metric" id="min6">25</p>
+                    <p class="metric" id="changemin6">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">Humidity(%)</p>
+                    <p class="metric" id="h6">25</p>
+                    <p class="metric" id="changeh6">25</p>
+                </div>
+                <div></div>
+                <div class="stat">
+                    <p class="parameter">Rainfall(mm)</p>
+                    <p class="metric" id="r6">25</p>
+                    <p class="metric" id="changer6">25</p>
+                    </div>
+                    <div></div>
+                    <div class="stat">
+                        <p class="parameter">Wind(m/s)</p>
+                        <p class="metric" id="w6">25</p>
+                        <p class="metric" id="changew6">25</p>
+                    </div>
+            </div>
+        </div>
+        <div class="weathercard">
+            <p class="dayndate" id="day7">30 July,2022<br>Saturdy</p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img7"></div>
+            <div class="conditions">
+                <div class="stat">
+                    <p class="parameter">MaxTemp(&#8451)</p>
+                    <p class="metric" id="max7">35</p>
+                        <p class="metric" id="changemax7">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">MinTemp(&#8451)</p>
+                    <p class="metric" id="min7">25</p>
+                    <p class="metric" id="changemin7">35</p>
+                </div>
+                <div class="stat">
+                    <p class="parameter">Humidity(%)</p>
+                    <p class="metric" id="h7">25</p>
+                    <p class="metric" id="changeh7">25</p>
+                </div>
+                <div></div>
+                <div class="stat">
+                    <p class="parameter">Rainfall(mm)</p>
+                    <p class="metric" id="r7">25</p>
+                    <p class="metric" id="changer7">25</p>
+                    </div>
+                    <div></div>
+                    <div class="stat">
+                        <p class="parameter">Wind(m/s)</p>
+                        <p class="metric" id="w7">25</p>
+                        <p class="metric" id="changew7">25</p>
+                    </div>
+            </div>
+        </div>
+</div>
+<div class="graph-btn-container">
+    <button class="maxtempbutton" onclick="maxgraphbutton()">Max Temp</button>
+    <button class="mintempbutton" onclick="mingraphbutton()">Min Temp</button>
+    <button class="rainbutton" onclick="raingraphbutton()" >Rainfall</button>
+</div>
+<div class="graph-holder" id="maxtempholder"></canvas></div>
+<div class="graph-holder" id="mintempholder"></canvas></div>
+<div class="graph-holder" id="rainholder"></canvas></div>
+-->
+<div class="pageend"></div>
+</div>
+    <script src="majproj.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    
+</body>
+</html>
