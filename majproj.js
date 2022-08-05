@@ -505,6 +505,7 @@ new Chart("maxTemp", {
     data: {
       labels: xValues,
       datasets: [{
+        label:"Max Temperature (in deg C)",
         backgroundColor: "red",
         data: maxVal
       }]
@@ -513,7 +514,7 @@ new Chart("maxTemp", {
       legend: {display: true},
       title: {
         display: true,
-        text: "Maximum Temp Variation"
+        text: "Maximum Temp Variation "
       }
     }
   });
@@ -523,12 +524,13 @@ new Chart("maxTemp", {
     data: {
       labels: xValues,
       datasets: [{
+        label:"Minimum Temperature (in deg C)",
         backgroundColor: "green",
         data: minVal
       }]
     },
     options: {
-      legend: {display: true},
+      legend: {display: false},
       title: {
         display: true,
         text: "Minimum Temp Variation"
@@ -541,6 +543,7 @@ new Chart("maxTemp", {
     data: {
       labels: xValues,
       datasets: [{
+       label:"Rainfall analysis (in mm)",
         backgroundColor: "blue",
         data: rainVal
       }]
@@ -597,6 +600,13 @@ new Chart("maxTemp", {
                    y.style.display="none";
                    x.style.display="none";
                 }
+    
+
+                
+   
+            
+                
+    
     
 
                 
